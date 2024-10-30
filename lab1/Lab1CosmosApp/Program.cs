@@ -7,7 +7,7 @@ namespace Lab1CosmosApp
     class Program
     {
         private static readonly string EndpointUri = "https://magdacosmosdbaccount.documents.azure.com:443/";
-        private static readonly string PrimaryKey = "d8gzGbhFihpCjU8p1ZAXGjWSsDnv0ONupCWoUCmZgGmvwdCbE8ohZk9krCp3J73Gaw97OJ76et1mACDb0FFWzg==";
+        private static readonly string PrimaryKey = "<mój primary key>";
         private static CosmosClient cosmosClient;
         private static Database database;
         private static Container container;
