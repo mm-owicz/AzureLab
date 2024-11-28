@@ -1,5 +1,9 @@
 ## Zadanie laboratoryjne 1
 
+Link do repozytorium z rozwiązaniem zadania: https://github.com/mm-owicz/AzureLab/tree/main/zad1
+
+Przypisany nr. zadania: 4
+
 ### **Tworzenie streszczenia treści dokumentu PDF**
    **Opis zadania:**
    - Korzystając z OpenAI API (np. GPT-4), załaduj plik PDF, a następnie prześlij jego zawartość do modelu, aby wygenerował streszczenie.
