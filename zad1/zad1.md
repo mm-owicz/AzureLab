@@ -1,14 +1,20 @@
 ## Zadanie laboratoryjne 1
 
+Magdalena Markowicz 310836
+
 Link do repozytorium z rozwiązaniem zadania: https://github.com/mm-owicz/AzureLab/tree/main/zad1
 
 Przypisany nr. zadania: 4
 
-### **Tworzenie streszczenia treści dokumentu PDF**
-   **Opis zadania:**
+
+## Treść zadania
+
+**Tworzenie streszczenia treści dokumentu PDF** \
+**Opis zadania:**
    - Korzystając z OpenAI API (np. GPT-4), załaduj plik PDF, a następnie prześlij jego zawartość do modelu, aby wygenerował streszczenie.
    - Wygenerowane streszczenie zapisz w pliku i wyświetl w konsoli.
    - Program powinien mieć możliwość wygenerowania streszczeń wielu plików umieszczonych w folderze
+
 
 ## Przygotowanie środowiska aplikacji
 
@@ -132,9 +138,11 @@ Pobrano przykładowy PDFy z strony https://www.princexml.com/samples/.
 W folderze PDFs umieszczono PDF `somatosensory.pdf`, będący fragmentem książki. Uruchomiono aplikację za pomocą komendy `dotnet run`.
 
 Program wypisał streszczenie w konsoli:
+
 ![Alt text](img_src/summary1.png)
 
 i stowrzył plik z streszczeniem w odpowiednim katalogu:
+
 ![Alt text](img_src/summary1file.png)
 
 Treść streszczenia:
@@ -146,9 +154,11 @@ The document is a sample showcasing page-based formatting featuring content from
 W folderze PDFs umieszczono PDF `drylab.pdf`, będący fragmentem newslettera. Uruchomiono aplikację za pomocą komendy `dotnet run`.
 
 Program wypisał streszczenie w konsoli:
+
 ![Alt text](img_src/summary2.png)
 
 i stowrzył plik z streszczeniem w odpowiednim katalogu:
+
 ![Alt text](img_src/summary2file.png)
 
 Treść streszczenia:
@@ -161,3 +171,7 @@ The newsletter concludes with an invitation to the Annual General Meeting on Jun
 ```
 
 Program wygenerował też ponowne streszczenie dla poprzedniego pliku PDF, ponieważnie usunięto do z folderu PDFs.
+
+---
+
+Cały kod źródłowy aplikacji znajduje się w folderze PDFSummaryApp w repozytorium. Przykładowe pliki PDF znajdują się w PDFSummaryApp/PDFs, a ich streszczenia w PDFSummaryApps/PDFSummaries.
