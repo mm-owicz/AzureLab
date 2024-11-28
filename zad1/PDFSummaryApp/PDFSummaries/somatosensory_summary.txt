@@ -1,0 +1,7 @@
+The text is an excerpt from a chapter of a Wikibook titled "Sensory Systems," focusing on the anatomy of the somatosensory system. It provides an overview of the various types of sensory receptors located in the skin, muscles, tendons, and joints that contribute to our sense of touch and proprioception. 
+
+The somatosensory system is comprised of cutaneous receptors, which detect temperature, pressure, texture, and pain, as well as muscle and joint receptors that convey information about muscle length, tension, and joint angles. 
+
+Key components include rapidly adapting and slowly adapting receptors, such as Meissner’s corpuscles for texture sensation, Merkel’s receptors for form perception, and the Pacinian corpuscles for vibration. The text also describes nociceptors, which are responsible for pain perception, and muscle spindles, which are stretch receptors crucial for muscle control. Lastly, joint receptors are mentioned, which help signal the joint's position and movement.
+
+The document emphasizes the role of these receptors in physical interaction with the environment and motor function, illustrating complex feedback mechanisms in the body related to movement and sensation.
