@@ -1,4 +1,4 @@
-## Zadanie laboratoryjne 1
+## Lab 2 - zadanie
 
 Magdalena Markowicz 310836
 
