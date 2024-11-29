@@ -4,6 +4,8 @@ Magdalena Markowicz 310836
 
 Wykonanio ćwiczenie za pommocą interfejsu portalu Azure.
 
+Link do repozytorium: https://github.com/mm-owicz/AzureLab/tree/main/lab1
+
 ## Krok 1 Utworzenie konta w Azure
 
 Zalogowano się w Azure Portal, przedłużając (po studiach inżynierskich) subskrypcję Azure for Students.
