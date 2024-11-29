@@ -15,10 +15,39 @@ Przypisany nr. zadania: 4
    - Wygenerowane streszczenie zapisz w pliku i wyświetl w konsoli.
    - Program powinien mieć możliwość wygenerowania streszczeń wielu plików umieszczonych w folderze
 
+## Przygotowanie konta Open AI
+
+Założono konto na stronie platform.openai.com. W ustawieniach, w zakładce "Billing", dodano dane karty i wpłacono minimalną sumę kredytów, czyli $5.00.
+
+W zakładce API keys, po potwierdzeniu numeru telefonu, stworzono API key i zapisano go w bezpiecznym miejscu.
+
+## Przygotowanie środowiska Azure Machine Learning
+
+Wybrano serwis `Azure Machine Learning` i opcję `Create Workspace`.
+
+Wybrano subskrypcję `Azure for Students` i stworzono nową `Resource Group` (którą nazwano "Zad1").
+
+![Alt text](img_src/azure1.png)
+
+Wybrano opcję `Review + create` a następnie `Create`. Po utworzeniu się zasobu, wybrano opcję `Go to resource`.
+
+Wybrano opcję `Launch Studio`.
+
+![Alt text](img_src/azure2.png)
+
+Po przejściu do zakładki `Środowisko obliczeniowe`, kliknięto opcję `+ Nowy` (język się przestawił na polski).
+Ustawiono nazwę środowiska obliczeniowego i Wybrano `Procesor CPU`. Wybrano domyślną opcję rozmiaru maszyny wirtualnej.
+
+![Alt text](img_src/azure3.png)
+
+Następnie, wybrano opcję `Przejrzyj i utwórz`.
+Po stworzeniu się zasobu, wybrano opcję `VS Code (wersja internetowa)`.
+
+![Alt text](img_src/azure4.png)
 
 ## Przygotowanie środowiska aplikacji
 
-.Net zainstalowano przy wykonywaniu lab 1.
+Aplikację napisano w przygotowanym wyżej środowisku VS Code. .Net był już zainstalowany na maszynie.
 
 Za pomocą komendy `dotnet new console -n PDFSummaryApp` storzono szablon aplikacji C#. Po przejściu do folderu aplikacji, zainstalowano potrzebne biblioteki - OpenAI i Docnet.Core. Użyto komend:
 
@@ -32,36 +61,21 @@ zamiast komend, można też po prostu dodać biblioteki w pliku .csproj:
     <PackageReference Include="OpenAI" Version="2.0.0" />
   </ItemGroup>
 ```
-
-## Przygotowanie konta Open AI
-
-Założono konto na stronie platform.openai.com. W ustawieniach, w zakładce "Billing", dodano dane karty i wpłacono minimalną sumę kredytów, czyli $5.00.
-
-W zakładce API keys, po potwierdzeniu numeru telefonu, stworzono API key. Zapisano go w Environmental Variables za pomocą komendy `setx OPENAI_API_KEY="mój klucz"`.
-
 ## Napisanie aplikacji
 
 W pliku `Program.cs`, napisano odpowiedni program.
 
-Program najpierw pobiera API key, który wcześniej stworzono i wyeksportowano:
+Program najpierw definiuje zmienną z API key. Następnie, stworzono instancję klasy ChatClient, która będzie służyła do przesłania zapytania do wybranego modelu. Wybrano model GPT-4o-mini.:
 ```c#
-string apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
-if (string.IsNullOrEmpty(apiKey))
-{
-    Console.WriteLine("No API key found.");
-    return;
-}
-```
+string apiKey = "mój API key";
 
-Następnie, stworzono instancję klasy ChatClient, która będzie służyła do przesłania zapytania do wybranego modelu. Wybrano model GPT-4o-mini.
-```c#
 ChatClient client = new("gpt-4o-mini", apiKey);
 ```
 
 Stworzono folder PDFs, w którym będą się znajdować PDFy do streszczenia. Zainicjalizowano zmienne z ścieżką do folderu PDFs i do folderu w którym będą streszczenia PDFów. Za pomocą `Directory.CreateDirectory()`, tworzony jest folder z streszczeniami (jeśli już nie istnieje). Pobrano wszystkie pliki PDF do zmiennej pdfFiles.
 ```c#
-string pdfFolder = @"C:\Users\magma\Desktop\MGSTR\sem1\ChmuraLab\zad1\PDFSummaryApp\PDFs";
-string summaryFolder = @"C:\Users\magma\Desktop\MGSTR\sem1\ChmuraLab\zad1\PDFSummaryApp\PDFSummaries";
+string pdfFolder = @"PDFs";
+string summaryFolder = @"PDFSummaries";
 
 Directory.CreateDirectory(summaryFolder);
 var pdfFiles = Directory.GetFiles(pdfFolder, "*.pdf");
@@ -132,7 +146,7 @@ Cały kod znajduje się w pliku Program.cs w repozytorium do którego link zosta
 
 ## Test
 
-Pobrano przykładowy PDFy z strony https://www.princexml.com/samples/.
+Pobrano przykładowe PDFy z strony https://www.princexml.com/samples/.
 
 #### Przykład 1:
 W folderze PDFs umieszczono PDF `somatosensory.pdf`, będący fragmentem książki. Uruchomiono aplikację za pomocą komendy `dotnet run`.
@@ -175,3 +189,5 @@ Program wygenerował też ponowne streszczenie dla poprzedniego pliku PDF, ponie
 ---
 
 Cały kod źródłowy aplikacji znajduje się w folderze PDFSummaryApp w repozytorium. Przykładowe pliki PDF znajdują się w PDFSummaryApp/PDFs, a ich streszczenia w PDFSummaryApps/PDFSummaries.
+
+Po wykonaniu zadania, usunięto stworzone zasoby w Azure aby nie zużywały środków.

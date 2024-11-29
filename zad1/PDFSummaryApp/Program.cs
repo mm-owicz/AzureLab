@@ -1,6 +1,4 @@
-﻿// using OpenAI.Managers;
-// using OpenAI.GPT3;
-using OpenAI.Chat;
+﻿using OpenAI.Chat;
 using OpenAI;
 using System.Text;
 using Docnet.Core;
@@ -10,17 +8,12 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        string apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
-        if (string.IsNullOrEmpty(apiKey))
-        {
-            Console.WriteLine("No API key found.");
-            return;
-        }
+        string apiKey = "mój API key";
 
         ChatClient client = new("gpt-4o-mini", apiKey);
 
-        string pdfFolder = @"C:\Users\magma\Desktop\MGSTR\sem1\ChmuraLab\zad1\PDFSummaryApp\PDFs";
-        string summaryFolder = @"C:\Users\magma\Desktop\MGSTR\sem1\ChmuraLab\zad1\PDFSummaryApp\PDFSummaries";
+        string pdfFolder = @"PDFs";
+        string summaryFolder = @"PDFSummaries";
 
         Directory.CreateDirectory(summaryFolder);
         var pdfFiles = Directory.GetFiles(pdfFolder, "*.pdf");
