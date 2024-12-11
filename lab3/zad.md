@@ -2,7 +2,7 @@
 
 Magdalena Markowicz 310836
 
-Link do repozytorium z rozwiązaniem zadania: https://github.com/mm-owicz/AzureLab/tree/main/zad1
+Link do repozytorium z rozwiązaniem zadania: https://github.com/mm-owicz/AzureLab/blob/main/lab3/zad.md
 
 Projekt bazowy (temat 4 / lab 2) + Custom Vision AI + Temat 10
 
