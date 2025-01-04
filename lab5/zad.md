@@ -2,7 +2,7 @@
 
 Magdalena Markowicz 310836
 
-Link do repozytorium z rozwiązaniem zadania:
+Link do repozytorium z rozwiązaniem zadania: https://github.com/mm-owicz/AzureLab/tree/main/lab5
 
 Projekt bazowy:
 - lab 2 - temat 4
