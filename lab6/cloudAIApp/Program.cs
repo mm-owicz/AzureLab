@@ -45,7 +45,7 @@ class Program
     static async Task Main(string[] args)
     {
         string endpoint = "https://documentintelligencelab42024.cognitiveservices.azure.com/";
-        string apiKey = "";
+        string apiKey = " ";
 
         string openAIApiKey = "";
 
