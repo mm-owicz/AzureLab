@@ -1,6 +1,7 @@
 # AzureLab
 
 Repozytorium do laboratoriów przedmiotu Programowanie usług w chmurze. Laboratoria skupiają się na pracy z Azure Cloud.
+W celach implementacji, skorzystano z portalu Azure Portal i środowiska .NET.
 
 ### Lab 1:
 - Azure SQL Database
@@ -12,24 +13,27 @@ Repozytorium do laboratoriów przedmiotu Programowanie usług w chmurze. Laborat
 https://github.com/labpw/AzureSQL/blob/master/Cwiczenie1.md
 
 ### Lab 2:
-- Azure Machine Learning + OpenAI API
+- Azure Machine Learning + tworzenie streszczeń z OpenAI API
 
-treść zadania w lab2/zad1.md
+### Lab 3:
+- Treść Lab 2 + 
+- Custom Vision AI - klasyfikacja zdjęć znalezionych w plikach PDF
+- Tłumaczenie za pomocą OpenAI API
 
----
+### Lab 4:
+- Treść Lab 3 +
+- Wyodrębnienie tekstu za pomocą Custom Document
+- Analiza dokumentów PDF (faktur) z Custom Document
+- Custom Vision AI - klasyfikacja zdjęć znalezionych w plikach PDF
 
-Repository for Programowanie usług w chmurze (Programming services in the cloud) laboratories. Labs are focused on Azure Cloud.
+### Lab 5:
+- Treść Lab 4 +
+- Custom Speech - trening modelu Speech-To-Text z formatowaniem tekstu wyjściowego
+- Azure Speech Services - transkrypcja pliku .mp3 na tekst
 
-### Lab 1:
-- Azure SQL Database
-- SSMS, Azure Data Studio, Entity Framework (.NET)
-- Working with Azure Table Storage
-- Configuring Azure SQL Database Firewall
-- Azure Cosmos DB
+### Lab 6:
+- Treść Lab 5 +
+- Generowanie obrazów na podstawie opisu OpenAI API (DALL-E)
+- Azure AI Language Service - analiza sentymentu
 
-https://github.com/labpw/AzureSQL/blob/master/Cwiczenie1.md
 
-### Lab 2:
-- Azure Machine Learning + OpenAI API
-
-excersize topic in lab2/zad1.md
